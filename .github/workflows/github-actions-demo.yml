@@ -16,11 +16,11 @@ jobs:
         with:
           r-version: "4.1.1"
       - name: Install packages
-          uses: r-lib/actions/setup-r-dependencies@v2
-          with:
-            packages: |
-              any::tidyverse 
-              any::googlesheets4
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+        packages: |
+          any::tidyverse 
+          any::googlesheets4
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
