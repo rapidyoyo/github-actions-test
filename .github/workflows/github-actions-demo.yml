@@ -18,9 +18,9 @@ jobs:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-        packages: |
-          any::tidyverse 
-          any::googlesheets4
+          packages: |
+            any::tidyverse 
+            any::googlesheets4
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
